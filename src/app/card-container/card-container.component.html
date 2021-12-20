@@ -1,0 +1,29 @@
+<div class="card-container">
+    <form action="">
+        <label for="source">Source</label>
+        <input #source type="text" name="source" id="source">
+        <br/>
+        <br/>
+        <label for="dest">Destinition</label>
+        <input #dest type="text" name="dest" id="dest">
+        <br>
+        <br>
+        <button (click)="onClickHandle(source.value, dest.value)">
+            Search flights
+        </button>
+    </form>
+
+    <hr>
+    <app-card *ngIf="both == true"
+        cityName="Explore Mumbai"
+        imageSource="https://static.toiimg.com/thumb/msid-24183773,width-1070,height-580,resizemode-75,imgsize-24183773,pt-32,y_pad-40/24183773.jpg"
+        source={{source.value}}
+        sourceAb="NY"
+        dest={{dest.value}}
+        destAb="BOM"
+        currency="USD"
+        price1="500"
+        price2="1000"
+        price3="1500"
+    ></app-card>
+</div>
